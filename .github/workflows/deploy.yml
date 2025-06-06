@@ -14,7 +14,7 @@ jobs:
 
     steps:
       - name: Install redis cli
-        run: sudo apt-get update -y && sudo apt-get install redis-tools -y
+        run: sudo apt-get udate -y && sudo apt-get install redis-tools -y
         
       - name: Test redis
         run: redis-cli -h localhost -p 6379 ping
@@ -34,7 +34,7 @@ jobs:
         run: npm install
         
       - name: Run test
-        run: npmn run test
+        run: npm run test
 
   deploy:
     if: ${{ always{} }}
